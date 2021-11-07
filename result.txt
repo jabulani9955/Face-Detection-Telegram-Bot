@@ -1,0 +1,12 @@
+ GPU isn't used 
+mini_batch = 1, batch = 24, time_steps = 1, train = 0 
+nms_kind: greedynms (1), beta = 0.600000 
+nms_kind: greedynms (1), beta = 0.600000 
+
+ seen 64, trained: 556 K-images (8 Kilo-batches_64) 
+ Detection layer: 30 - type = 28 
+ Detection layer: 37 - type = 28 
+./output/photo_132032976_308.jpg: Predicted in 1820.785000 milli-seconds.
+Dima: 97%
+Yulia: 98%
+Mark: 99%
