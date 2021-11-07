@@ -1,2 +1,3 @@
 # Face-Detection-Telegram-Bot
-t.me/ds_06_bot
+Ссылка на бота: <https://t.me/ds_06_bot>
+
