@@ -1,6 +1,7 @@
 import os
 import time
 import logging
+import cv2
 
 from dotenv import load_dotenv
 from aiogram import Bot, types
@@ -21,6 +22,7 @@ START = """
 ABOUT = "CCC - Свой Среди Своих"
 STICKER = 'CAACAgIAAxkBAAEDH3ZhcPwuk8_ea46pVXd7kcKtuJaJCgACeSUAAp7OCwABlPU3foy-CJwhBA'
 
+
 # Включаем логирование
 logging.basicConfig(
     filename='log.log', 
@@ -29,7 +31,7 @@ logging.basicConfig(
 
 # Загрузка токена через env
 load_dotenv()
-TOKEN = os.getenv('TOKEN')
+TOKEN = os.getenv('TELEGRAM_TOKEN')
 
 # Инициализация бота
 bot = Bot(token=TOKEN)
@@ -73,7 +75,6 @@ async def handle_photo_for_prediction(message):
         w, h = resize_image(photo_name, resized_photo_name)
         result, result_photo = get_predict(resized_photo_name)
         restore_image(result_photo, result_photo, w, h)
-
         await bot.send_photo(chat_id, photo=open(result_photo, 'rb'), caption=result)
     else:
         await message.reply("Пожалуйста, пришли одну фотографию, а не вот столько!")
