@@ -6,7 +6,4 @@ nms_kind: greedynms (1), beta = 0.600000
  seen 64, trained: 556 K-images (8 Kilo-batches_64) 
  Detection layer: 30 - type = 28 
  Detection layer: 37 - type = 28 
-./output/photo_132032976_308.jpg: Predicted in 1820.785000 milli-seconds.
-Dima: 97%
-Yulia: 98%
-Mark: 99%
+./output/photo_132032976_425.jpg: Predicted in 1236.178000 milli-seconds.
