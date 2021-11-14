@@ -1,8 +1,8 @@
 import os
 import subprocess
-
 import cv2
 import matplotlib.pyplot as plt
+
 
 def get_predict(img_path):
     PH = "/home/jabulani/Bot_Faces/darknet/"
@@ -12,3 +12,4 @@ def get_predict(img_path):
         text = list(filter(None, text))
         out = text[8:]
     return ('\n'.join(out), f'predictions.jpg') if out else ('Не могу никого узнать :(', f'predictions.jpg')
+
